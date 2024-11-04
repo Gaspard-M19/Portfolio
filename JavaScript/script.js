@@ -216,26 +216,3 @@ photo.addEventListener('mouseover', () => {
 photo.addEventListener('mouseout', () => {
   photo.style.animationPlayState = 'paused';
 });
-
-
-//envoi un mail, mais ne fonctionne pas pour le moment
-var btn = document.getElementById('btn')
-btn.addEventListener('click', function(e){
-  e.preventDefault()
-  var name = document.getElementById('fname')
-  var mail = document.getElementById('maddress')
-  var txt = document.getElementById('mcontent')
-  var sub = document.getElementById('subject')
-  var body = txt + '<br/>' + '<br/>' + name
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "malmon.gaspard@gmail.com",
-    Password : "",
-    To : 'malmon.gaspard@gmail.com',
-    From : mail,
-    Subject : sub,
-    Body : body
-  }).then(
-  message => alert(message)
-  );
-})
