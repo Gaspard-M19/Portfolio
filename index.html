@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!--bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--smtp link-->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <title>CV Gaspard Malmon</title>
+</head>
+<body>
+    <header id="page-container" class="bg-dark bg-gradient" id="open-pop">
+        <div>
+            <img id="pic" src="gassou.jpg" class="img-fluid img-thumbnail rounded-circle" width="200" height="200">
+        </div>
+        <div id="titres">
+            <h1>GASPARD MALMON</h1>
+            <h2>Technicien en informatique</h2>
+            <address>
+                <p>Contact : <a href="mailto:malmon.gaspard@gmail.com">malmon.gaspard@gmail.com</a> | <a href="tel:+33754812324">07.54.81.23.24</a> | La Garenne-Colombes</p>
+            </address>
+        </div>
+        <div>
+            <nav><ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul></nav>
+        </div>
+    </header>
+    <main id="page-container" id="content-wrap">
+        <div class="container">
+                <a href="#profile"><button class="card" id="ProfPerso" onclick="ProfPerso()" ><h2 >Profil Personnel</h2></button></a>
+
+                <a href="#formation"><button class="card" id="Format" onclick="Format()"><h2>Formation</h2></button></a>
+
+                <a href="#experience"><button class="card" id="XpProf" onclick="XpProf()"><h2>Expérience Professionnelle</h2></button></a>
+
+                <a href="#skills"><button class="card" id="Comp" onclick="Comp()"><h2>Compétences</h2></button></a>
+
+                <a href="#languages"><button class="card" id="Lang" onclick="Lang()"><h2>Langues Étrangères</h2></button></a>
+
+                <a href="#interests"><button class="card" id="CenterInt" onclick="CenterInt()" ><h2>Centres d'Intérêt</h2></button></a>
+
+                <a href="#contact"><button class="card" id="Contact" onclick="Contact()"><h2>Contactez moi</h2></button></a>
+
+        </div>
+        <div id="open-pop">
+            <section id="profile">
+                <p class="card">Depuis toujours intéressé par l'informatique, j'ai à cœur de relever des défis complexes et d'apporter des solutions concrètes. Je souhaite mettre à profit mes compétences et en développer de nouvelles dans le but d'être un atout majeur au sein de votre entreprise.</p>
+            </section>
+            <section id="formation" >
+                <ul class="card">
+                    <li><strong>Septembre 2024 :</strong> MSc Informatique, Epitech Paris</li>
+                    <li><strong>2023/2024 :</strong> L1 Sciences de l'Ingénieur, Sorbonne Université</li>
+                    <li><strong>2022 :</strong> BTS Services Informatiques aux Organisations, Lycée Montalembert</li>
+                    <li><strong>2020 :</strong> Baccalauréat S, Lycée Albert-Camus</li>
+                </ul>
+            </section>
+            <section id="experience" >
+                <ul class="card">
+                    <li><strong>BH-Technologies, Nanterre (2021) :</strong> Service réseaux - Mise à jour serveur, paramétrage de logiciels sur matériel Android, reconfiguration PC</li>
+                    <li><strong>DSI Pôle Emploi, Montreuil (2021) :</strong> Service Antivirus - Installation et mise à jour de logiciels antivirus, gestion des GPO</li>
+                    <li><strong>La Cantine du Midi, Marseille (2022) :</strong> Serveur, commis de cuisine, plongeur</li>
+                    <li><strong>Café du Centre, Paris (2022/2023) :</strong> Commis de bar</li>
+                </ul>
+            </section>
+            <section id="skills" >
+                <ul class="card">
+                    <li><strong>System :</strong> Windows, Linux, macOS, VMware</li>
+                    <li><strong>Réseaux :</strong> DNS, DHCP, VLAN, VPN, Proxy</li>
+                    <li><strong>Programmation :</strong> Python, Bash, WordPress (HTML, CSS)</li>
+                    <li><strong>Bureautique :</strong> Maîtrise du pack Office</li>
+                </ul>
+            </section>
+            <section id="languages" >
+                <ul class="card">
+                    <li>Anglais : Niveau B2</li>
+                    <li>Allemand : Niveau scolaire</li>
+                </ul>
+            </section>
+            <section id="interests" >
+                <ul class="card">
+                    <li>Pop culture</li>
+                    <li>Gaming (rétro et récent)</li>
+                    <li>Cuisine</li>
+                    <li>Musculation en salle</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <form action="action_page.php">
+              
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              
+                  <label for="maddress">Email Address</label>
+                  <input type="text" id="maddress" name="mailaddress" placeholder="Email adress..">
+
+                  <label for="subject">Email Address</label>
+                  <input type="text" id="subject" name="subject" placeholder="Subject..">
+              
+                  <label for="mcontent">Mail content</label>
+                  <textarea id="mcontent" name="content" placeholder="Mail content.." style="height:200px"></textarea>
+              
+                  <button id="btn">Send</button>
+              
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="page-container" >
+        <p>&copy; Gaspard Malmon 2024</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</html>
